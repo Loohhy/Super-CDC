@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Queridos Consumidores - Super CDC</title>
+  <style>
+    body {
+      background-color: #fdf7f1;
+      font-family: 'Verdana', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #4e342e;
+      text-align: center;
+    }
 
+    header {
+      background-color: #a1887f;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      font-family: 'Arial Rounded MT Bold', sans-serif;
+      color: #fff;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    .icon {
+      font-size: 3em;
+    }
+
+    .mascote {
+      width: 250px;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #d7ccc8;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #5d4037;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bem-vindo ao Super CDC!</h1>
+    <div class="icon">📦📦📦</div>
+  </header>
+
+  <p>Este é o seu espaço para aprender sobre os seus direitos como consumidor de forma divertida e interativa!</p>
+  <p>Clique no botão no canto inferior direito e converse com o nosso herói Super CDC!</p>
+
+  <!-- Mascote do Super CDC -->
+  <img src="super-cdc.png" alt="Super CDC" class="mascote">
+
+  <footer>
+    © 2025 Queridos Consumidores | Desenvolvido com ❤️ por Loohhy
+  </footer>
+
+  <!-- Script do chatbot do Voiceflow -->
+  <script type="text/javascript">
+    (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6828ba4112a16689134e712e' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          locale: 'pt-BR',
+          voice: {
+            languageCode: 'pt-BR',
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      };
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
+      v.type = "text/javascript"; 
+      s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+</body>
+</html>
