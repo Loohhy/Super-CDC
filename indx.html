@@ -1,129 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Super CDC – Queridos Consumidores</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super CDC - Queridos Consumidores</title>
   <style>
+    :root {
+      --marrom-claro: #D8C3A5;
+      --marrom-medio: #A67B5B;
+      --marrom-escuro: #6F4E37;
+      --bege: #F5F5DC;
+      --fonte-principal: 'Arial Rounded MT Bold', sans-serif;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f8f4f0;
-      color: #3e2f1c;
+      font-family: var(--fonte-principal);
+      background-color: var(--bege);
+      color: var(--marrom-escuro);
     }
 
-    header {
-      background: #a67c52;
+    header, footer {
+      background-color: var(--marrom-medio);
       color: white;
+      padding: 1em;
       text-align: center;
-      padding: 30px 20px;
+      font-size: 1.5em;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .emoji {
-      font-size: 2rem;
-    }
-
-    .mascote {
-      width: 150px;
-      margin: 20px auto;
-      display: block;
-      border-radius: 50%;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    header p {
+      font-size: 0.8em;
+      margin: 0.2em 0 0;
     }
 
     main {
+      padding: 2em;
       max-width: 800px;
       margin: auto;
-      background: #fffaf5;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 40px;
-      margin-top: 30px;
     }
 
-    h2 {
-      color: #5a3c1c;
-      text-align: center;
+    .chatbot-balloon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--marrom-claro);
+      border-radius: 20px;
+      padding: 15px;
+      width: 320px;
+      height: 500px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
     }
 
-    p {
-      font-size: 1.1rem;
-      text-align: center;
-      margin-bottom: 20px;
+    .chatbot-balloon h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
     }
 
-    iframe {
-      width: 100%;
-      height: 700px;
-      border: none;
-      border-radius: 12px;
-    }
-
-    footer {
-      background-color: #3e2f1c;
-      color: white;
-      text-align: center;
+    .formulario {
+      background-color: #fff;
       padding: 20px;
-      margin-top: 40px;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-top: 2em;
     }
 
-    .instagram {
-      margin-top: 15px;
+    input, textarea, button {
       display: block;
-      color: #f5e8d3;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .emoji-scale {
-      font-size: 2rem;
-      display: block;
+      width: 100%;
       margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: var(--fonte-principal);
+    }
+
+    button {
+      background-color: var(--marrom-escuro);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: var(--marrom-medio);
+    }
+
+    .balanca-direito {
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    .balanca-direito img {
+      width: 80px;
+    }
+
+    .menu-flutuante {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: var(--marrom-escuro);
+      border-radius: 0 12px 12px 0;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    .menu-flutuante a {
+      display: block;
+      padding: 15px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      transition: background-color 0.3s;
+    }
+
+    .menu-flutuante a:hover {
+      background-color: var(--marrom-medio);
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 1em;
+      }
+
+      .chatbot-balloon {
+        width: 100%;
+        height: 400px;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+        padding: 10px;
+      }
+
+      .formulario {
+        padding: 15px;
+      }
+
+      input, textarea, button {
+        font-size: 1em;
+        padding: 8px;
+      }
+
+      header, footer {
+        font-size: 1.2em;
+      }
+
+      header p {
+        font-size: 0.7em;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>⚖️ Super CDC – Queridos Consumidores ⚖️</h1>
-    <p class="emoji">🦸‍♂️ Um projeto de extensão em Direito feito com carinho!</p>
+    Super CDC - Projeto de Extensão em Direito 💼⚖️
+    <p>@arrependimento.on no Instagram</p>
   </header>
 
-  <img class="mascote" src="https://i.imgur.com/lvv9nlt.png" alt="Mascote Super CDC"/>
+  <div class="menu-flutuante">
+    <a href="#">📚 Dicas do Consumidor</a>
+    <a href="#">🛍️ Direitos em Compras</a>
+    <a href="#">🧾 Nota Fiscal</a>
+    <a href="#">📞 SAC e Reclamações</a>
+  </div>
 
   <main>
-    <h2>📋 Formulário de Ajuda & Denúncia</h2>
-    <p>Queremos te ouvir! Como podemos te ajudar? Use o formulário abaixo para relatar problemas, enviar denúncias ou tirar dúvidas. ✨</p>
+    <h1>Bem-vindos Queridos Consumidores!</h1>
+    <p>Esse é o nosso espaço para você aprender, interagir e compartilhar opiniões sobre seus direitos como consumidor, de forma divertida e educativa.</p>
 
-    <!-- Formulário central -->
-    <iframe src="https://formspree.io/f/xrbqjjjk" loading="lazy"></iframe>
+    <div class="balanca-direito">
+      <img src="https://cdn-icons-png.flaticon.com/512/2965/2965878.png" alt="Balança da Justiça">
+    </div>
+
+    <section class="formulario">
+      <h2>Deixe sua opinião</h2>
+      <form action="https://formsubmit.co/seuemail@exemplo.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Projeto de Extensão Super CDC – Todos os direitos reservados</p>
-    <a class="instagram" href="https://instagram.com/arrependimento.on" target="_blank">📸 Nos siga no Instagram: @arrependimento.on</a>
-    <span class="emoji-scale">⚖️</span>
-  </footer>
+  <div class="chatbot-balloon">
+    <h4>💬 Super CDC</h4>
+    <iframe
+      src="https://app.botpress.cloud/chatbot/super-cdc/embed"
+      width="100%"
+      height="90%"
+      frameborder="0"
+      style="border: none; border-radius: 12px; overflow: hidden;">
+    </iframe>
+  </div>
 
-  <!-- Botpress balão marrom -->
-  <script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
-  <script>
-    window.botpressWebChat.init({
-      configUrl: "https://files.bpcontent.cloud/2025/05/17/20/20250517203533-MW9CUIA8.json",
-      botName: "Super CDC",
-      avatarUrl: "https://i.imgur.com/lvv9nlt.png",
-      backgroundColor: "#a67c52",
-      textColorOnBackground: "#ffffff",
-      textColor: "#3e2f1c",
-      accentColor: "#5a3c1c",
-      enableReset: true,
-      showPoweredBy: false
-    });
-  </script>
+  <footer>
+    Projeto Acadêmico | Todos os direitos reservados ⚖️
+  </footer>
 </body>
 </html>
