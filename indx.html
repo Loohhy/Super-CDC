@@ -63,30 +63,27 @@
   <img src="super-cdc.png" alt="Super CDC" class="mascote">
 
   <footer>
-    © 2025 Queridos Consumidores | Desenvolvido com ❤️ por Loohhy
+    © 2025 Queridos Consumidores | Desenvolvido por Direito Do Consumidor
   </footer>
 
   <!-- Script do chatbot do Voiceflow -->
-  <script type="text/javascript">
-    (function(d, t) {
+<script type="text/javascript">
+  (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
         window.voiceflow.chat.load({
           verify: { projectID: '6828ba4112a16689134e712e' },
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production',
-          locale: 'pt-BR',
-          voice: {
-            languageCode: 'pt-BR',
-            url: "https://runtime-api.voiceflow.com"
+          assistant: {
+            voice: true, // ativa a voz
+            locale: 'pt-BR' // define o idioma como português do Brasil
           }
         });
       };
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
-      v.type = "text/javascript"; 
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+      v.type = "text/javascript";
       s.parentNode.insertBefore(v, s);
-    })(document, 'script');
-  </script>
-</body>
-</html>
+  })(document, 'script');
+</script>
 
