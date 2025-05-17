@@ -1,166 +1,129 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Super CDC - Projeto de Extensão</title>
+  <title>Super CDC – Queridos Consumidores</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f7f2e7;
+      background: #f8f4f0;
       color: #3e2f1c;
     }
 
     header {
-      background-color: #a67c52;
-      padding: 1.5rem;
-      text-align: center;
+      background: #a67c52;
       color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .emoji {
       font-size: 2rem;
-      font-weight: bold;
     }
 
-    .container {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-      background: #fff7ec;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-
-    .logo {
+    .mascote {
+      width: 150px;
+      margin: 20px auto;
       display: block;
-      margin: 0 auto 1.5rem;
-      max-width: 200px;
       border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
 
-    .icon {
-      font-size: 2rem;
-      margin-right: 10px;
+    main {
+      max-width: 800px;
+      margin: auto;
+      background: #fffaf5;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 40px;
+      margin-top: 30px;
     }
 
     h2 {
       color: #5a3c1c;
       text-align: center;
-      margin-bottom: 0.5rem;
     }
 
-    iframe.bot {
+    p {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    iframe {
       width: 100%;
-      height: 600px;
+      height: 700px;
       border: none;
       border-radius: 12px;
-      margin-top: 2rem;
-    }
-
-    form {
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.08);
-      margin-top: 2rem;
-    }
-
-    label {
-      display: block;
-      margin: 1rem 0 0.5rem;
-      font-weight: bold;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    button {
-      background-color: #a67c52;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 8px;
-      margin-top: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #8c633f;
     }
 
     footer {
       background-color: #3e2f1c;
       color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
+      padding: 20px;
+      margin-top: 40px;
     }
 
-    .social-link {
-      color: #ffe9c2;
+    .instagram {
+      margin-top: 15px;
+      display: block;
+      color: #f5e8d3;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .scale-icon {
-      font-size: 48px;
-      text-align: center;
-      animation: float 2s infinite ease-in-out;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
+    .emoji-scale {
+      font-size: 2rem;
+      display: block;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    ⚖️ Super CDC – Chatbot Educativo de Direito do Consumidor
+    <h1>⚖️ Super CDC – Queridos Consumidores ⚖️</h1>
+    <p class="emoji">🦸‍♂️ Um projeto de extensão em Direito feito com carinho!</p>
   </header>
 
-  <div class="container">
-    <img src="supercdc.png" alt="Mascote Super CDC" class="logo"/>
+  <img class="mascote" src="https://i.imgur.com/lvv9nlt.png" alt="Mascote Super CDC"/>
 
-    <div class="scale-icon">⚖️</div>
+  <main>
+    <h2>📋 Formulário de Ajuda & Denúncia</h2>
+    <p>Queremos te ouvir! Como podemos te ajudar? Use o formulário abaixo para relatar problemas, enviar denúncias ou tirar dúvidas. ✨</p>
 
-    <h2>Bem-vindo ao nosso projeto de extensão universitária!</h2>
-    <p style="text-align: center;">
-      Este chatbot foi desenvolvido por alunos de Direito com o objetivo de informar, conscientizar e orientar consumidores de forma divertida e acessível.
-    </p>
-
-    <iframe
-      class="bot"
-      src="https://cdn.botpress.cloud/webchat/v2.4/shareable.html?configUrl=https://files.bpcontent.cloud/2025/05/17/20/20250517203533-MW9CUIA8.json"
-      title="Super CDC - Chatbot"
-    ></iframe>
-
-    <form action="https://formspree.io/f/xrbqjjjk" method="POST">
-      <h2>📬 Como podemos ajudar?</h2>
-
-      <label for="nome">Nome:</label>
-      <input type="text" name="nome" id="nome" required />
-
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" required />
-
-      <label for="mensagem">Mensagem, dúvida ou denúncia:</label>
-      <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
+    <!-- Formulário central -->
+    <iframe src="https://formspree.io/f/xrbqjjjk" loading="lazy"></iframe>
+  </main>
 
   <footer>
-    Siga nosso projeto no Instagram: 
-    <a class="social-link" href="https://instagram.com/arrependimento.on" target="_blank">@arrependimento.on</a> <br />
-    © 2025 - Projeto de Extensão Direito do Consumidor
+    <p>&copy; 2025 Projeto de Extensão Super CDC – Todos os direitos reservados</p>
+    <a class="instagram" href="https://instagram.com/arrependimento.on" target="_blank">📸 Nos siga no Instagram: @arrependimento.on</a>
+    <span class="emoji-scale">⚖️</span>
   </footer>
 
+  <!-- Botpress balão marrom -->
+  <script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      configUrl: "https://files.bpcontent.cloud/2025/05/17/20/20250517203533-MW9CUIA8.json",
+      botName: "Super CDC",
+      avatarUrl: "https://i.imgur.com/lvv9nlt.png",
+      backgroundColor: "#a67c52",
+      textColorOnBackground: "#ffffff",
+      textColor: "#3e2f1c",
+      accentColor: "#5a3c1c",
+      enableReset: true,
+      showPoweredBy: false
+    });
+  </script>
 </body>
 </html>
