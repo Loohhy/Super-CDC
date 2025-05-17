@@ -1,72 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Queridos Consumidores - Super CDC</title>
-  <style>
-    body {
-      background-color: #fdf7f1;
-      font-family: 'Verdana', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #4e342e;
-      text-align: center;
-    }
-    header {
-      background-color: #a1887f;
-      padding: 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-    h1 {
-      font-size: 2.5em;
-      font-family: 'Arial Rounded MT Bold', sans-serif;
-      color: #fff;
-      margin: 0;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Queridos Consumidores - Trabalho Faculdade</title>
 
-    p {
-      font-size: 1.2em;
-      margin: 20px auto;
-      max-width: 600px;
-    }
+<!-- Fonte arredondada e agradável -->
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
 
-    .icon {
-      font-size: 3em;
-    }
+<style>
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #A9746E 0%, #D9C9B6 100%);
+    margin: 0; padding: 0;
+    color: #4A3721;
+  }
 
-    .mascote {
-      width: 250px;
-      margin-top: 20px;
-    }
+  .container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff9f1;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    padding: 30px 40px;
+    position: relative;
+  }
 
-    footer {
-      background-color: #d7ccc8;
-      padding: 10px;
-      font-size: 0.9em;
-      color: #5d4037;
-    }
-  </style>
+  h1 {
+    text-align: center;
+    color: #5B3E2B;
+    margin-bottom: 10px;
+  }
+
+  /* Ícone balança no topo */
+  .balance-icon {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #7E5A41;
+  }
+
+  p.description {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  /* Bolha com conteúdo */
+  .bubble {
+    background: #A9746E;
+    color: #fff9f1;
+    border-radius: 25px;
+    padding: 20px 30px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+  }
+
+  /* Espaço do Instagram */
+  .instagram {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .instagram a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #5B3E2B;
+    font-size: 1.2rem;
+  }
+
+  .instagram a:hover {
+    color: #D9C9B6;
+  }
+
+  /* Formulário */
+  form {
+    background: #fff9f1;
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 8px #A9746E88;
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    color: #5B3E2B;
+    font-weight: 600;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1.5px solid #A9746E;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    resize: vertical;
+  }
+
+  textarea {
+    min-height: 80px;
+  }
+
+  button {
+    background-color: #5B3E2B;
+    color: #fff9f1;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+  }
+
+  button:hover {
+    background-color: #7E5A41;
+  }
+
+  /* Rodapé discreto */
+  footer {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #7E5A41;
+    font-size: 0.9rem;
+  }
+</style>
+
+<!-- Ícone balança (usando emoji) -->
 </head>
 <body>
 
-  <header>
-    <h1>Bem-vindo ao Super CDC!</h1>
-    <div class="icon">📦📦📦</div>
-  </header>
+<div class="container">
+  <div class="balance-icon" title="Símbolo da balança do direito">⚖️</div>
+  <h1>Queridos Consumidores</h1>
+  <p class="description">Chatbot para trabalho extensivo da faculdade. Fale conosco clicando no ícone no canto inferior direito.</p>
 
-  <p>Este é o seu espaço para aprender sobre os seus direitos como consumidor de forma divertida e interativa!</p>
-  <p>Clique no botão no canto inferior direito e converse com o nosso herói Super CDC!</p>
+  <div class="bubble">
+    Este site é um projeto acadêmico com foco em Direito do Consumidor.
+  </div>
 
-  <!-- Mascote do Super CDC -->
-  <img src="super-cdc.png" alt="Super CDC" class="mascote">
-  
-  <footer>
-    © 2025 Queridos Consumidores | Desenvolvido por Direitos Dos Consumidores
-  </footer>
+  <div class="instagram">
+    Siga nosso Instagram: <a href="https://instagram.com/arrependimento.on" target="_blank" rel="noopener">@arrependimento.on</a>
+  </div>
 
-  <!-- Script do chatbot do Voiceflow -->
-  <script type="text/javascript">
+  <form id="contactForm">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+    <label for="message">Mensagem:</label>
+    <textarea id="message" name="message" placeholder="Escreva sua mensagem aqui..." required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<footer>© 2025 Queridos Consumidores - Trabalho Faculdade</footer>
+
+<!-- Voiceflow chatbot -->
+<script type="text/javascript">
   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
@@ -74,15 +174,31 @@
           verify: { projectID: '6828ba4112a16689134e712e' },
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          },
           assistant: {
-            voice: true, // ativa a voz
-            locale: 'pt-BR' // define o idioma como português do Brasil
-          }
+            voice: true,
+            locale: "pt-BR"
+          },
+          autostart: false,
+          showWelcomeMessage: true
         });
-      };
+      }
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
       v.type = "text/javascript";
       s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
 
+<script>
+  // Formulário fake só para efeito visual, pode ajustar para enviar a algum servidor depois
+  document.getElementById('contactForm').addEventListener('submit', function(event){
+    event.preventDefault();
+    alert('Mensagem enviada! Obrigado por entrar em contato.');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
