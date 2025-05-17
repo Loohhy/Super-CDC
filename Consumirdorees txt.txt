@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Queridos Consumidores - Super CDC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fdf7f2;
+      color: #5a3e2b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 40px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+    .icon {
+      font-size: 4rem;
+      color: #a9744f;
+      margin: 20px 0;
+    }
+    footer {
+      position: fixed;
+      bottom: 10px;
+      font-size: 0.9rem;
+      color: #a9744f;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <i class="fas fa-box icon"></i>
+    <h1>Bem-vindo ao Super CDC!</h1>
+    <p>Fale com o nosso chatbot clicando no ícone no canto inferior direito.</p>
+  </div>
+
+  <footer>© 2025 Queridos Consumidores. Todos os direitos reservados.</footer>
+
+  <!-- Script do Voiceflow -->
+  <script type="text/javascript">
+    (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6828ba4112a16689134e712e' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+      v.type = "text/javascript";
+      s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+</body>
+</html>
+
