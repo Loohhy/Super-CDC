@@ -1,204 +1,166 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Queridos Consumidores - Trabalho Faculdade</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Super CDC - Projeto de Extensão</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f2e7;
+      color: #3e2f1c;
+    }
 
-<!-- Fonte arredondada e agradável -->
-<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+    header {
+      background-color: #a67c52;
+      padding: 1.5rem;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
 
-<style>
-  body {
-    font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(135deg, #A9746E 0%, #D9C9B6 100%);
-    margin: 0; padding: 0;
-    color: #4A3721;
-  }
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff7ec;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
 
-  .container {
-    max-width: 700px;
-    margin: 40px auto;
-    background: #fff9f1;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    padding: 30px 40px;
-    position: relative;
-  }
+    .logo {
+      display: block;
+      margin: 0 auto 1.5rem;
+      max-width: 200px;
+      border-radius: 50%;
+    }
 
-  h1 {
-    text-align: center;
-    color: #5B3E2B;
-    margin-bottom: 10px;
-  }
+    .icon {
+      font-size: 2rem;
+      margin-right: 10px;
+    }
 
-  /* Ícone balança no topo */
-  .balance-icon {
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 10px;
-    color: #7E5A41;
-  }
+    h2 {
+      color: #5a3c1c;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
 
-  p.description {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-  }
+    iframe.bot {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
 
-  /* Bolha com conteúdo */
-  .bubble {
-    background: #A9746E;
-    color: #fff9f1;
-    border-radius: 25px;
-    padding: 20px 30px;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    margin-bottom: 30px;
-  }
+    form {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.08);
+      margin-top: 2rem;
+    }
 
-  /* Espaço do Instagram */
-  .instagram {
-    text-align: center;
-    margin-bottom: 30px;
-  }
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+      font-weight: bold;
+    }
 
-  .instagram a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #5B3E2B;
-    font-size: 1.2rem;
-  }
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
 
-  .instagram a:hover {
-    color: #D9C9B6;
-  }
+    button {
+      background-color: #a67c52;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-  /* Formulário */
-  form {
-    background: #fff9f1;
-    padding: 20px 25px;
-    border-radius: 15px;
-    box-shadow: inset 0 0 8px #A9746E88;
-  }
+    button:hover {
+      background-color: #8c633f;
+    }
 
-  label {
-    display: block;
-    margin-top: 15px;
-    color: #5B3E2B;
-    font-weight: 600;
-  }
+    footer {
+      background-color: #3e2f1c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
 
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: 1.5px solid #A9746E;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-family: 'Quicksand', sans-serif;
-    resize: vertical;
-  }
+    .social-link {
+      color: #ffe9c2;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-  textarea {
-    min-height: 80px;
-  }
+    .scale-icon {
+      font-size: 48px;
+      text-align: center;
+      animation: float 2s infinite ease-in-out;
+    }
 
-  button {
-    background-color: #5B3E2B;
-    color: #fff9f1;
-    padding: 12px 25px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 20px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-weight: 700;
-  }
-
-  button:hover {
-    background-color: #7E5A41;
-  }
-
-  /* Rodapé discreto */
-  footer {
-    text-align: center;
-    margin: 40px 0 20px;
-    color: #7E5A41;
-    font-size: 0.9rem;
-  }
-</style>
-
-<!-- Ícone balança (usando emoji) -->
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="balance-icon" title="Símbolo da balança do direito">⚖️</div>
-  <h1>Queridos Consumidores</h1>
-  <p class="description">Chatbot para trabalho extensivo da faculdade. Fale conosco clicando no ícone no canto inferior direito.</p>
+  <header>
+    ⚖️ Super CDC – Chatbot Educativo de Direito do Consumidor
+  </header>
 
-  <div class="bubble">
-    Este site é um projeto acadêmico com foco em Direito do Consumidor.
+  <div class="container">
+    <img src="supercdc.png" alt="Mascote Super CDC" class="logo"/>
+
+    <div class="scale-icon">⚖️</div>
+
+    <h2>Bem-vindo ao nosso projeto de extensão universitária!</h2>
+    <p style="text-align: center;">
+      Este chatbot foi desenvolvido por alunos de Direito com o objetivo de informar, conscientizar e orientar consumidores de forma divertida e acessível.
+    </p>
+
+    <iframe
+      class="bot"
+      src="https://cdn.botpress.cloud/webchat/v2.4/shareable.html?configUrl=https://files.bpcontent.cloud/2025/05/17/20/20250517203533-MW9CUIA8.json"
+      title="Super CDC - Chatbot"
+    ></iframe>
+
+    <form action="https://formspree.io/f/xrbqjjjk" method="POST">
+      <h2>📬 Como podemos ajudar?</h2>
+
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome" required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="mensagem">Mensagem, dúvida ou denúncia:</label>
+      <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
   </div>
 
-  <div class="instagram">
-    Siga nosso Instagram: <a href="https://instagram.com/arrependimento.on" target="_blank" rel="noopener">@arrependimento.on</a>
-  </div>
-
-  <form id="contactForm">
-    <label for="name">Nome:</label>
-    <input type="text" id="name" name="name" placeholder="Seu nome" required>
-
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-
-    <label for="message">Mensagem:</label>
-    <textarea id="message" name="message" placeholder="Escreva sua mensagem aqui..." required></textarea>
-
-    <button type="submit">Enviar</button>
-  </form>
-</div>
-
-<footer>© 2025 Queridos Consumidores - Trabalho Faculdade</footer>
-
-<!-- Voiceflow chatbot -->
-<script type="text/javascript">
-  (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: '6828ba4112a16689134e712e' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production',
-          voice: {
-            url: "https://runtime-api.voiceflow.com"
-          },
-          assistant: {
-            voice: true,
-            locale: "pt-BR"
-          },
-          autostart: false,
-          showWelcomeMessage: true
-        });
-      }
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
-      v.type = "text/javascript";
-      s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
-
-<script>
-  // Formulário fake só para efeito visual, pode ajustar para enviar a algum servidor depois
-  document.getElementById('contactForm').addEventListener('submit', function(event){
-    event.preventDefault();
-    alert('Mensagem enviada! Obrigado por entrar em contato.');
-    this.reset();
-  });
-</script>
+  <footer>
+    Siga nosso projeto no Instagram: 
+    <a class="social-link" href="https://instagram.com/arrependimento.on" target="_blank">@arrependimento.on</a> <br />
+    © 2025 - Projeto de Extensão Direito do Consumidor
+  </footer>
 
 </body>
 </html>
